@@ -6,7 +6,7 @@ import Loader from "../../Components/Loader";
 const Conntainer = styled.div`
   height: calc(100vh - 50px);
   width: 100%;
-  padding: 50px;
+  padding: 50px 80px;
 `;
 
 const Backdrop = styled.div`
@@ -29,13 +29,39 @@ const Content = styled.div`
 `;
 
 const Cover = styled.div`
-  width: 30%;
+  width: 35%;
   background-image: url(${props => props.bgImage});
   background-position: center center;
   background-size: cover;
   height: 100%;
   border-radius: 5px;
   z-index: 1;
+`;
+
+const Data = styled.div`
+  width: 65%;
+  padding-left: 80px;
+`;
+
+const Title = styled.h3`
+  font-size: 32px;
+`;
+
+const ItemContainer = styled.div`
+  margin: 20px 0;
+`;
+
+const Item = styled.span``;
+
+const Divider = styled.span`
+  margin: 0 10px;
+`;
+
+const Overview = styled.p`
+  font-size: 12px;
+  opacity: 0.7;
+  line-height: 1.5;
+  width: 80%;
 `;
 
 const DetailPresenter = ({ result, loading, error }) =>
@@ -54,6 +80,30 @@ const DetailPresenter = ({ result, loading, error }) =>
               : require("../../assets/ImgNotFound.jpg")
           }
         />
+        <Data>
+          <Title>
+            {result.original_title
+              ? result.original_title
+              : result.original_name}
+          </Title>
+          <ItemContainer>
+            <Item>
+              {result.release_date
+                ? result.release_date.substring(0, 4)
+                : result.first_air_date.substring(0, 4)}
+            </Item>
+            <Divider>∙</Divider>
+            <Item>
+              {result.runtime ? result.runtime : result.episode_run_time[0]} min
+            </Item>
+            <Divider>∙</Divider>
+            <Item>
+              {result.genres &&
+                result.genres.map(genre => genre.name).join(" / ")}
+            </Item>
+          </ItemContainer>
+          <Overview>{result.overview}</Overview>
+        </Data>
       </Content>
     </Conntainer>
   );
