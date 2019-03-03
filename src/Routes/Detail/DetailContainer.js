@@ -25,7 +25,7 @@ export default class extends React.Component {
 			this.setState({
 				result
 			});
-		} catch {
+		} catch (error) {
 			this.setState({
 				result: null,
 				error: "Can't find anything."
