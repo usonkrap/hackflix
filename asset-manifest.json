@@ -1,0 +1,11 @@
+{
+  "main.js": "/hackflix/static/js/main.e5f82a13.chunk.js",
+  "main.js.map": "/hackflix/static/js/main.e5f82a13.chunk.js.map",
+  "runtime~main.js": "/hackflix/static/js/runtime~main.98bc7c4b.js",
+  "runtime~main.js.map": "/hackflix/static/js/runtime~main.98bc7c4b.js.map",
+  "static/js/2.b6b047e6.chunk.js": "/hackflix/static/js/2.b6b047e6.chunk.js",
+  "static/js/2.b6b047e6.chunk.js.map": "/hackflix/static/js/2.b6b047e6.chunk.js.map",
+  "index.html": "/hackflix/index.html",
+  "precache-manifest.e7c20578afaa693c65ec159d2db56706.js": "/hackflix/precache-manifest.e7c20578afaa693c65ec159d2db56706.js",
+  "service-worker.js": "/hackflix/service-worker.js"
+}
