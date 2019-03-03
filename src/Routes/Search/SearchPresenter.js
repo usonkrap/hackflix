@@ -21,10 +21,22 @@ const Input = styled.input`
   width: 100%;
 `;
 
-const SearchPresenter = ({ movieResults, tvResults, searchTerm, loading, error, handleSubmit, updateTerm }) => (
+const SearchPresenter = ({
+  movieResults,
+  tvResults,
+  searchTerm,
+  loading,
+  error,
+  handleSubmit,
+  updateTerm
+}) => (
   <Container>
     <Form onSubmit={handleSubmit}>
-      <Input value={searchTerm} onChange={updateTerm} placeholder='Search Movies or TV Show..' />
+      <Input
+        value={searchTerm}
+        onChange={updateTerm}
+        placeholder='Search Movies or TV Show..'
+      />
     </Form>
     {loading ? (
       <Loader />
@@ -60,9 +72,12 @@ const SearchPresenter = ({ movieResults, tvResults, searchTerm, loading, error, 
           </Section>
         )}
         {error && <Message color='#e74c3c' text={error} />}
-        {movieResults && tvResults && movieResults.length === 0 && tvResults.length === 0 && (
-          <Message text='Nothing found' color='#95a5a6' />
-        )}
+        {movieResults &&
+          tvResults &&
+          movieResults.length === 0 &&
+          tvResults.length === 0 && (
+            <Message text='Nothing found' color='#95a5a6' />
+          )}
       </>
     )}
   </Container>
