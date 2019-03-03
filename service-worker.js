@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/hackflix/precache-manifest.e7c20578afaa693c65ec159d2db56706.js"
+  "/hackflix/precache-manifest.53742096cb16b67fcb1d37140e346663.js"
 );
 
 workbox.clientsClaim();
